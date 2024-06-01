@@ -5,10 +5,11 @@ A lightweight in-process messenger.
 # Usage
 
 ## Create your own message and denote it with AsyncMessage for async messages or SyncMessage for sync messages attributes
-`[AsyncMessage]
-public class FakeAsyncMessage { }`
-`[SyncMessage]
-public class FakeSyncMessage { }`
+`[AsyncMessage]`  
+`public class FakeAsyncMessage { }`  
+
+`[SyncMessage]`  
+`public class FakeSyncMessage { }`
 
 ## Add ReactiveMessenger into DI container
 `services.AddReactiveMessenger()`
