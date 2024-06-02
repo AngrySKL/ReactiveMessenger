@@ -3,4 +3,7 @@
 namespace Test.Messages;
 
 [AsyncMessage]
-public class FakeAsyncMessage { }
+public class FakeAsyncMessage
+{
+    public int Vaue { get; set; }
+}

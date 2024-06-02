@@ -18,6 +18,7 @@ public static class Extensions
 
     public static IApplicationBuilder UseReactiveMessenger(this IApplicationBuilder app)
     {
+        // TODO: filter out more specificed assemblies
         var assemblies = AppDomain.CurrentDomain.GetAssemblies();
         var allTypes = new List<Type>();
         foreach (var assembly in assemblies)
