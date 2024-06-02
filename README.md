@@ -14,12 +14,13 @@ A lightweight in-process messenger.
 ## Add ReactiveMessenger into DI container
 `services.AddReactiveMessenger()`
 
-## Use ReactiveMessenger will load all denoted message into reactive messenger
+## UseReactiveMessenger will load all denoted message into reactive messenger
 `app.UseReactiveMesenger()`
-
 
 ### Or you can register by your own
 `messenger.RegisterSyncMessage<FakeSyncMessage>()`
+
+## Inject `IMessenger` anywhere you want and then
 
 ### Send
 `messenger.SendSyncMessage<FakeSyncMessage>(new())`
