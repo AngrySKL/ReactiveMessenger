@@ -39,7 +39,7 @@ public class Messenger : IMessenger
             throw new InvalidOperationException($"Synchronous message {type.Name} has not been registered!");
         }
 
-        return (value as Subject<TSyncMessage>).ObserveOn(ThreadPoolScheduler.Instance).AsObservable();
+        return (value as Subject<TSyncMessage>).AsObservable();
     }
     #endregion
 
@@ -75,7 +75,7 @@ public class Messenger : IMessenger
             throw new InvalidOperationException($"Asynchronous message {type.Name} has not been registered!");
         }
 
-        return (value as Subject<TAsyncMessage>).AsObservable();
+        return (value as Subject<TAsyncMessage>).ObserveOn(ThreadPoolScheduler.Instance).AsObservable();
     }
     #endregion
 }
