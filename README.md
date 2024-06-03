@@ -29,4 +29,4 @@ A lightweight in-process messenger.
 `messenger.GetSyncMessenger<FakeSyncMessage>(new()).Subscribe(payload => { //payload is FakeSyncMessage })`
 
 # What's the difference between synchronous and asychronous messenger?
-Synchronous messenger sends messages in sequence while asychronous messenger sends messages in parallel.
+Synchronous messenger sends messages in sequence on the same thread the `SendSyncMessage` is called while asychronous messenger sends messages in sequence on a different thread than the one called `SendAsyncMessage`.
